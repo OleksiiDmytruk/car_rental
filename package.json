@@ -2,6 +2,7 @@
   "name": "car_rental",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://OleksiiDmytruk.github.io/car_rental",
   "type": "module",
   "scripts": {
     "dev": "vite",
