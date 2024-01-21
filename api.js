@@ -9,7 +9,7 @@ const instance = axios.create({
   },
 });
 
-export const getAllCars = () => {
-  const respons = instance.get("/adverts");
+export const getAllCars = async () => {
+  const respons = await instance.get("/adverts");
   return respons.data;
 };
