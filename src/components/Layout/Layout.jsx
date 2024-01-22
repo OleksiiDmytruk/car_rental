@@ -9,7 +9,7 @@ export const Layout = () => {
       <Header>
         <Nav>
           <StyledLink to="/" end>
-            Home
+            OpenRoad
           </StyledLink>
           <StyledLink to="/catalog">Catalog</StyledLink>
           <StyledLink to="/favorites">Favorites</StyledLink>
