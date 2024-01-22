@@ -1,0 +1,1 @@
+import{u as t,j as s}from"./index-XCNJ3GBT.js";import{b as a,S as e,C as o}from"./CarsList-G5BkVwq_.js";const c=()=>{const r=t(a);return s.jsxs(s.Fragment,{children:[s.jsx(e,{}),s.jsx(o,{rentalCars:r})]})};export{c as Favorites,c as default};

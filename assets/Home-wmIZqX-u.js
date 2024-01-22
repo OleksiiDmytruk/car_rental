@@ -1,0 +1,1 @@
+import{j as e}from"./index-XCNJ3GBT.js";const r=()=>{},s=()=>e.jsxs(e.Fragment,{children:[e.jsx("section",{children:e.jsx("h1",{children:"OpenRoad: Your Journey, Your Rules"})}),e.jsx(r,{})]}),o=()=>e.jsx(s,{});export{o as Home,o as default};

@@ -1,4 +1,4 @@
-import{j as e,b as r,r as l,c}from"./index-ag_IkBOg.js";const u=s=>s.cars.isLoading,v=s=>s.cars.rentalCars,m=s=>s.favorites.favorites,g=()=>e.jsx("p",{children:"SearchBar"}),p=r.div`
+import{j as e,b as r,r as l,c}from"./index-XCNJ3GBT.js";const u=s=>s.cars.isLoading,v=s=>s.cars.rentalCars,m=s=>s.favorites.favorites,g=()=>e.jsx("p",{children:"SearchBar"}),p=r.div`
   position: fixed;
   top: 0;
   left: 0;
