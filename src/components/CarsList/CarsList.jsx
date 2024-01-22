@@ -1,7 +1,6 @@
 import { CarCard } from "../CarCard/CarCard";
 
 export const CarsList = ({ rentalCars }) => {
-  console.log(rentalCars);
   return (
     <ul>
       {rentalCars.map((car) => (

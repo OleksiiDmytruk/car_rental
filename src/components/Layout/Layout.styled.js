@@ -5,21 +5,22 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  max-width: 1200px;
+  width: 1400px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 12px 60px;
 `;
 export const StyledLink = styled(NavLink)`
-  color: black;
-  border: 1px solid black;
-  border-radius: 6px;
+  color: #3470ff;
   text-transform: capitalize;
-  padding: 4px 8px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
 
-  &.active {
-    color: blueviolet;
-    border-color: blueviolet;
+  &.active,
+  :hover {
+    color: #0b44cd;
+    transform: scale(1.2);
   }
 `;
 
@@ -27,9 +28,11 @@ export const Header = styled.header`
   display: flex;
   align-items: start;
   width: 100%;
-  border-bottom: 2px solid blue;
+  height: 48px;
+  border-bottom: 4px solid blue;
 `;
 export const Nav = styled.nav`
+  margin-left: 24px;
   display: flex;
-  gap: 16px;
+  gap: 48px;
 `;
