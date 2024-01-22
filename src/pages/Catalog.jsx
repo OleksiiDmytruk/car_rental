@@ -5,6 +5,7 @@ import { SearchBar } from "../components/SearchBar/SearchBar";
 import { Loader } from "../components/Loader/Loadeer";
 import { CarsList } from "../components/carsList/carsList";
 import { fetchCars } from "../redux/operations";
+import { TextButton } from "../components/carsList/carsList.styled";
 
 export const Catalog = () => {
   const loading = useSelector(selectLoading);
@@ -19,7 +20,7 @@ export const Catalog = () => {
       <SearchBar />
       {loading && <Loader />}
       <CarsList rentalCars={rentalCars} />
-      <button type="button">Load more</button>
+      <TextButton type="button">Load more</TextButton>
     </>
   );
 };

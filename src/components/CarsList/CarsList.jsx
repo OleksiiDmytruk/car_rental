@@ -1,13 +1,14 @@
 import { CarCard } from "../CarCard/CarCard";
+import { List, Item } from "./carsList.styled";
 
 export const CarsList = ({ rentalCars }) => {
   return (
-    <ul>
+    <List>
       {rentalCars.map((car) => (
-        <li key={car.id}>
+        <Item key={car.id}>
           <CarCard car={car} />
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 };
