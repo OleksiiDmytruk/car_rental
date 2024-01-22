@@ -19,6 +19,7 @@ export const Catalog = () => {
       <SearchBar />
       {loading && <Loader />}
       <CarsList rentalCars={rentalCars} />
+      <button type="button">Load more</button>
     </>
   );
 };
