@@ -1,9 +1,27 @@
-import { Backdrop, FormStyle } from "./Modal.styled";
+import { useEffect } from "react";
+import { Backdrop, ModalStyle } from "./Modal.styled";
 
 export const Modal = ({ car, onClose }) => {
+  useEffect(() => {
+    window.addEventListener("keydown", onEscape);
+    return () => {
+      window.removeEventListener("keydown", onEscape);
+    };
+  });
+  const onEscape = (evt) => {
+    if (evt.code === "Escape") {
+      onClose();
+    }
+  };
+
+  const closeOnBaackdropClick = (evt) => {
+    if (evt.currentTarget === evt.target) {
+      onClose();
+    }
+  };
   return (
-    <Backdrop>
-      <FormStyle>
+    <Backdrop onClick={closeOnBaackdropClick}>
+      <ModalStyle>
         <img src={car.img} alt={car.make} />
         <div>
           <p>
@@ -12,9 +30,9 @@ export const Modal = ({ car, onClose }) => {
         </div>
         <div>
           <div>
-            <p>{car.address}</p>
+            <p>{car.address.split(",")[1]}</p>
             <div></div>
-            <p>{car.address}</p>
+            <p>{car.address.split(",").pop()}</p>
             <div></div>
             <p>Id: {car.id}</p>
             <div></div>
@@ -55,7 +73,7 @@ export const Modal = ({ car, onClose }) => {
           </div>
         </div>
         <button type="button">Rental car</button>
-      </FormStyle>
+      </ModalStyle>
     </Backdrop>
   );
 };

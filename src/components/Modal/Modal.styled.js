@@ -13,7 +13,7 @@ export const Backdrop = styled.div`
     visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
-export const FormStyle = styled.div`
+export const ModalStyle = styled.div`
   background-color: white;
   margin: 0 auto;
   position: absolute;

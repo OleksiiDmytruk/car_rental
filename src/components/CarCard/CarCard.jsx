@@ -15,9 +15,9 @@ export const CarCard = ({ car }) => {
       </div>
       <div>
         <div>
-          <p>{car.address}</p>
+          <p>{car.address.split(",")[1]}</p>
           <div></div>
-          <p>{car.address}</p>
+          <p>{car.address.split(",").pop()}</p>
           <div></div>
           <p>{car.rentalCompany}</p>
         </div>
