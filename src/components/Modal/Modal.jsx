@@ -1,5 +1,14 @@
 import { useEffect } from "react";
-import { Backdrop, ModalStyle } from "./Modal.styled";
+import {
+  Backdrop,
+  Img,
+  ModalStyle,
+  Title,
+  AkcentTitle,
+  Descriptions,
+  SubTitle,
+} from "./Modal.styled";
+import { InfoWrap, Text } from "../CarCard/CarCard.styled";
 
 export const Modal = ({ car, onClose }) => {
   useEffect(() => {
@@ -22,42 +31,35 @@ export const Modal = ({ car, onClose }) => {
   return (
     <Backdrop onClick={closeOnBaackdropClick}>
       <ModalStyle>
-        <img src={car.img} alt={car.make} />
+        <Img src={car.img} alt={car.make} />
+        <Title>
+          {car.make} <AkcentTitle>{car.model}</AkcentTitle>, {car.year}
+        </Title>
         <div>
-          <p>
-            {car.make} <span>{car.model}</span>, {car.year}
-          </p>
-        </div>
-        <div>
-          <div>
-            <p>{car.address.split(",")[1]}</p>
-            <div></div>
-            <p>{car.address.split(",").pop()}</p>
-            <div></div>
-            <p>Id: {car.id}</p>
-            <div></div>
-            <p>Year: {car.year}</p>
-            <div></div>
-            <p>Type: {car.type}</p>
-          </div>
-          <div>
-            <p>Fuel Consumption: {car.fuelConsumption}</p>
-            <div></div>
-            <p>Engine Size: {car.engineSize}</p>
-          </div>
-          <p>{car.description}</p>
-          <p>Accessories and functionalities:</p>
-          <div>
+          <InfoWrap>
+            <Text>{car.address.split(",")[1]}</Text>
+            <Text>{car.address.split(",").pop()}</Text>
+            <Text>Id: {car.id}</Text>
+            <Text>Year: {car.year}</Text>
+            <Text>Type: {car.type}</Text>
+          </InfoWrap>
+          <InfoWrap>
+            <Text>Fuel Consumption: {car.fuelConsumption}</Text>
+            <Text>Engine Size: {car.engineSize}</Text>
+          </InfoWrap>
+          <Descriptions>{car.description}</Descriptions>
+          <SubTitle>Accessories and functionalities:</SubTitle>
+          <InfoWrap>
             {car.accessories.map((el, idx) => (
-              <p key={idx}>{el}</p>
+              <Text key={idx}>{el}</Text>
             ))}
-          </div>
-          <div>
+          </InfoWrap>
+          <InfoWrap>
             {car.functionalities.map((el, idx) => (
-              <p key={idx}>{el}</p>
+              <Text key={idx}>{el}</Text>
             ))}
-          </div>
-          <p>Rental Conditions:</p>
+          </InfoWrap>
+          <SubTitle>Rental Conditions:</SubTitle>
           <div>
             {car.rentalConditions.split("\n").map((el, idx) => (
               <div key={idx}>
