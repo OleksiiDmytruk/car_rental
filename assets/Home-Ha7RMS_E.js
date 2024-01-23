@@ -1,4 +1,4 @@
-import{u as r,j as e}from"./index-QIojDec6.js";const n="/car_rental/assets/car-iQjOK_nm.jpg",i=r.section`
+import{u as r,j as e}from"./index-ed2TDQrn.js";const n="/car_rental/assets/car-iQjOK_nm.jpg",i=r.section`
   width: 1280px;
   height: 600px;
   position: relative;
